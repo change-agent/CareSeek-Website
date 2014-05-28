@@ -1,0 +1,4 @@
+{{extend 'layout.html'}}
+{{block content}}
+<h> Contact</h>
+{{end}}

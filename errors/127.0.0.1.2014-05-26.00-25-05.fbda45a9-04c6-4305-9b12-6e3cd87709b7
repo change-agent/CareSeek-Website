@@ -1,0 +1,216 @@
+(dp1
+S'output'
+p2
+S'missing "pass" in view'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'response.write(\'<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->\\n<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\\n    <meta charset="utf-8">\\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\\n    <meta name="viewport" content="width=device-width, initial-scale=1">\\n    <meta name="description" content="">\\n    <meta name="author" content="">\\n    <link rel="shortcut icon" href="">\\n    <title>CareSeek</title>\\n    \\n    <!-- Bootstrap core CSS -->\\n    \', escape=False)\nresponse.files.append(URL(\'static\',\'bootstrap.min.css\'))\nresponse.write(\'\\n    \', escape=False)\nresponse.files.append(URL(\'static/css\',\'bootstrap-tagsinput.css\'))\nresponse.write(\'\\n    \', escape=False)\nresponse.write(\'<script type="text/javascript"><!--\\n    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).\\n    var w2p_ajax_confirm_message = "\', escape=False)\nresponse.write(T(\'Are you sure you want to delete this object?\'))\nresponse.write(\'";\\n    var w2p_ajax_disable_with_message = "\', escape=False)\nresponse.write(T(\'Working...\'))\nresponse.write(\'";\\n    var w2p_ajax_date_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d\'))\nresponse.write(\'";\\n    var w2p_ajax_datetime_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d %H:%M:%S\'))\nresponse.write(\'";\\n    var ajax_error_500 = \\\'\', escape=False)\nresponse.write(T.M(\'An error occured, please [[reload %s]] the page\') % URL(args=request.args, vars=request.get_vars))\nresponse.write("\'\\n    //--></script>\\n", escape=False)\nresponse.files.insert(0,URL(\'static\',\'js/jquery.js\'))\nresponse.files.insert(1,URL(\'static\',\'css/calendar.css\'))\nresponse.files.insert(2,URL(\'static\',\'js/calendar.js\'))\nresponse.files.insert(3,URL(\'static\',\'js/web2py.js\'))\nresponse.include_meta()\nresponse.include_files()\nresponse.write(\'\\n\', escape=False)\nresponse.write(\'\\n    \\n    <!-- Custom styles for this template -->\\n    <style type="text/css">\\n        .navbar-inverse .navbar-nav >li>a {\\n            color: #E9D6C5;\\n        }\\n\\n        .navbar-inverse {\\n            background-color: #457;\\n            border-color: #080808;\\n        }\\n\\n        .navbar-inverse .navbar-brand {\\n            color: #E9D6C5;\\n        }\\n\\n        .btn-primary {\\n            color: #E9D6C5;\\n            background-color: #333;\\n            border-color: #111;\\n        }\\n\\n        body {\\n            background-color: #F5F5F5;\\n            padding: 60px;\\n        }\\n    </style>\\n</head>\\n\\n<body>\\n    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">\\n        <div class="container">\\n            <div class="navbar-header">\\n                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">\\n                    <span class="sr-only">Toggle navigation</span>\\n                    <span class="icon-bar"></span>\\n                    <span class="icon-bar"></span>\\n                    <span class="icon-bar"></span>\\n                </button>\\n                <a class="navbar-brand" href="\', escape=False)\nresponse.write(URL(\'default\',\'index\'))\nresponse.write(\'">CareSeek</a>\\n            </div>\\n            \', escape=False)\nresponse.write(\'\\n    <div class="navbar-collapse collapse">\\n                <ul class="nav navbar-nav navbar-right">\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "search"))\nresponse.write(\'\\\' id="searchPage">Search</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "mySchedule"))\nresponse.write(\'\\\' id="schedule">Schedule</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "myProfile"))\nresponse.write(\'\\\' id="profile">My Profile</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "settings"))\nresponse.write(\'\\\' id="usrSettings">Settings</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "help"))\nresponse.write(\'\\\' id="Help">Help</a></li>\\n                    <li><a  href=\\\'\', escape=False)\nresponse.write(URL("default", "user/logout"))\nresponse.write(\'\\\' id="logout">Logout</a></li>\\n                </ul>\\n            </div>\\n    \', escape=False)\nresponse.write(\'\\n        </div>\\n    </div>\\n    \', escape=False)\nresponse.write(\'\\n    <div class="container-fluid">\\n            \', escape=False)\nresponse.write(\'\\r\\n    <div class="col-sm-8 col-md-8 main" id="calender">\\r\\n        <h1 class="page-header">Wellcome to \', escape=False)\nresponse.write(user.first_name)\nresponse.write(\' \', escape=False)\nresponse.write(user.last_name)\nresponse.write(\' page</h1>\\r\\n        <p>I am a \', escape=False)\nresponse.write(user.User_Type)\nresponse.write(\'</p>\\r\\n        </p>\\r\\n        <pre>\\r\\n        \', escape=False)\nif not same:\n    response.write(\'\\r\\n        \', escape=False)\n    if not subscribe:\n        response.write("\\r\\n       <li><a href=\'", escape=False)\n        response.write(URL("default", "subscribe",args=user.id))\n        response.write(\'\\\' class="btn btn-success">Forge link</a></li>\\r\\n        \', escape=False)\n    else:\n        response.write(\'\\r\\n        <button type="button" class="btn btn-success">Subscribed</button>\\r\\n        \', escape=False)\n        pass\n    response.write(\'\\r\\n        \', escape=False)\n    same\n    response.write(\'\\r\\n        OVERVIEW\\r\\n        This website is operated by CareSeek. Throughout the site, the terms \\xe2\\x80\\x9cwe\\xe2\\x80\\x9d, \\xe2\\x80\\x9cus\\xe2\\x80\\x9d and \\xe2\\x80\\x9cour\\xe2\\x80\\x9d refer to CareSeek. CareSeek offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.\\r\\n\\r\\n        By visiting our site and/or purchasing something from us, you engage in our \\xe2\\x80\\x9cService\\xe2\\x80\\x9d and agree to be bound by the following terms and conditions (\\xe2\\x80\\x9cTerms of Service\\xe2\\x80\\x9d, \\xe2\\x80\\x9cTerms\\xe2\\x80\\x9d), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.\\r\\n\\r\\n        Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.\\r\\n\\r\\n        Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.\\r\\n\\r\\n        Our store is hosted on Shopify Inc. They provide us with the online e-commerce platform that allows us to sell our products and services to you.\\r\\n\\r\\n        SECTION 1 - ONLINE STORE TERMS\\r\\n        By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.\\r\\n\\r\\n        You may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).\\r\\n\\r\\n        You must not transmit any worms or viruses or any code of a destructive nature.\\r\\n\\r\\n        A breach or violation of any of the Terms will result in an immediate termination of your Services.\\r\\n        </pre>          \\r\\n    </div>\\r\\n\\r\\n    <div class="col-sm-4 col-md-4 main" id="notifications">\\r\\n        <div class="row">\\r\\n            <div class="col-xs-12 col-sm-12 col-md-12">\\r\\n                <h1 class="page-header">Recent News</h1>\\r\\n                    <pre>\\r\\n                    OVERVIEW\\r\\n                    This website is operated by CareSeek. Throughout the site, the terms \\xe2\\x80\\x9cwe\\xe2\\x80\\x9d, \\xe2\\x80\\x9cus\\xe2\\x80\\x9d and \\xe2\\x80\\x9cour\\xe2\\x80\\x9d refer to CareSeek. CareSeek offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.\\r\\n\\r\\n                    By visiting our site and/or purchasing something from us, you engage in our \\xe2\\x80\\x9cService\\xe2\\x80\\x9d and agree to be bound by the following terms and conditions (\\xe2\\x80\\x9cTerms of Service\\xe2\\x80\\x9d, \\xe2\\x80\\x9cTerms\\xe2\\x80\\x9d), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.\\r\\n                    </pre>      \\r\\n            </div>\\r\\n        </div>\\r\\n        <div class="row">\\r\\n            <div class="col-xs-12 col-sm-12 col-md-12">\\r\\n                <h1 class="page-header">Notifications</h1>\\r\\n                    <pre>\\r\\n                    OVERVIEW\\r\\n                    This website is operated by CareSeek. Throughout the site, the terms \\xe2\\x80\\x9cwe\\xe2\\x80\\x9d, \\xe2\\x80\\x9cus\\xe2\\x80\\x9d and \\xe2\\x80\\x9cour\\xe2\\x80\\x9d refer to CareSeek. CareSeek offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.\\r\\n\\r\\n                    By visiting our site and/or purchasing something from us, you engage in our \\xe2\\x80\\x9cService\\xe2\\x80\\x9d and agree to be bound by the following terms and conditions (\\xe2\\x80\\x9cTerms of Service\\xe2\\x80\\x9d, \\xe2\\x80\\x9cTerms\\xe2\\x80\\x9d), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.\\r\\n                    </pre> \\r\\n            </div>\\r\\n        </div> \\r\\n        </div>\\r\\n   \\r\\n\', escape=False)\n    response.write(\'\\n    </div>\\n\', escape=False)\n    response.write(\'\\n    <!-- The javascript =============================================\\n    (Placed at the end of the document so the pages load faster) -->\\n    <script src="\', escape=False)\n    response.write(URL(\'static/js\',\'jquery-1.11.0.min.js\'))\n    response.write(\'"></script>\\n    <script src="\', escape=False)\n    response.write(URL(\'static/js\',\'bootstrap.min.js\'))\n    response.write(\'"></script>\\n    <script src="\', escape=False)\n    response.write(URL(\'static/js\',\'formTest.js\'))\n    response.write(\'"></script>\\n    <script src="\', escape=False)\n    response.write(URL(\'static/js\',\'sanitise.js\'))\n    response.write(\'"></script>\\n    <script src="\', escape=False)\n    response.write(URL(\'static/js\',\'search.js\'))\n    response.write(\'"></script>\\n    <script src="\', escape=False)\n    response.write(URL(\'static/js\',\'userReg.js\'))\n    response.write(\'"></script>\\n</body>\\n</html>\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'gluon.rocket'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of SocketTimeout object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of SocketTimeout object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of SocketTimeout object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of SocketTimeout object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'__init__'
+p26
+S"<method-wrapper '__init__' of SocketTimeout object>"
+p27
+sS'__setattr__'
+p28
+S"<method-wrapper '__setattr__' of SocketTimeout object>"
+p29
+sS'__reduce_ex__'
+p30
+S'<built-in method __reduce_ex__ of SocketTimeout object>'
+p31
+sS'__new__'
+p32
+S'<built-in method __new__ of type object>'
+p33
+sS'__format__'
+p34
+S'<built-in method __format__ of SocketTimeout object>'
+p35
+sS'__class__'
+p36
+S"<class 'gluon.rocket.SocketTimeout'>"
+p37
+sS'__doc__'
+p38
+S"'Exception for when a socket times out between requests.'"
+p39
+sS'__getitem__'
+p40
+S"<method-wrapper '__getitem__' of SocketTimeout object>"
+p41
+sS'__setstate__'
+p42
+S'<built-in method __setstate__ of SocketTimeout object>'
+p43
+sS'__getattribute__'
+p44
+S"<method-wrapper '__getattribute__' of SocketTimeout object>"
+p45
+sS'args'
+p46
+S"('Socket timed out before request.',)"
+p47
+sS'__subclasshook__'
+p48
+S'<built-in method __subclasshook__ of type object>'
+p49
+sS'__unicode__'
+p50
+S'<built-in method __unicode__ of SocketTimeout object>'
+p51
+sS'__delattr__'
+p52
+S"<method-wrapper '__delattr__' of SocketTimeout object>"
+p53
+sS'__repr__'
+p54
+S"<method-wrapper '__repr__' of SocketTimeout object>"
+p55
+sS'__hash__'
+p56
+S"<method-wrapper '__hash__' of SocketTimeout object>"
+p57
+ssS'evalue'
+p58
+S'Socket timed out before request.'
+p59
+sS'frames'
+p60
+(lp61
+(dp62
+S'file'
+p63
+S'C:\\home\\mdipierro\\make_web2py\\web2py\\gluon\\rocket.py'
+p64
+sS'dump'
+p65
+(dp66
+sS'lnum'
+p67
+I1337
+sS'lines'
+p68
+(dp69
+sS'call'
+p70
+S'(self=<WSGIWorker(Thread-36, started daemon 10448)>)'
+p71
+sS'func'
+p72
+S'run'
+p73
+sa(dp74
+g63
+S'C:\\home\\mdipierro\\make_web2py\\web2py\\gluon\\rocket.py'
+p75
+sg65
+(dp76
+sg67
+I1830
+sg68
+(dp77
+sg70
+S'(self=<WSGIWorker(Thread-36, started daemon 10448)>, conn=<gluon.rocket.Connection object>)'
+p78
+sg72
+S'run_app'
+p79
+sa(dp80
+g63
+S'C:\\home\\mdipierro\\make_web2py\\web2py\\gluon\\rocket.py'
+p81
+sg65
+(dp82
+sg67
+I1650
+sg68
+(dp83
+sg70
+S'(self=<WSGIWorker(Thread-36, started daemon 10448)>, sock_file=<socket._fileobject object>, conn=<gluon.rocket.Connection object>)'
+p84
+sg72
+S'build_environ'
+p85
+sa(dp86
+g63
+S'C:\\home\\mdipierro\\make_web2py\\web2py\\gluon\\rocket.py'
+p87
+sg65
+(dp88
+sg67
+I1401
+sg68
+(dp89
+sg70
+S'(self=<WSGIWorker(Thread-36, started daemon 10448)>, sock_file=<socket._fileobject object>)'
+p90
+sg72
+S'read_request_line'
+p91
+sasS'pyver'
+p92
+S'Python 2.7.6: C:\\Users\\4524\\Documents\\web2py_win\\web2py\\web2py.exe (prefix: C:\\Python27)'
+p93
+sS'etype'
+p94
+S"<class 'gluon.rocket.SocketTimeout'>"
+p95
+sS'date'
+p96
+S'Mon May 26 00:25:06 2014'
+p97
+sS'locals'
+p98
+(dp99
+S'sock_file'
+p100
+S'<socket._fileobject object>'
+p101
+sS'self'
+p102
+S'<WSGIWorker(Thread-36, started daemon 10448)>'
+p103
+sssS'traceback'
+p104
+S'Traceback (most recent call last):\n  File "/home/mdipierro/make_web2py/web2py/gluon/rocket.py", line 1337, in run\n  File "/home/mdipierro/make_web2py/web2py/gluon/rocket.py", line 1830, in run_app\n  File "/home/mdipierro/make_web2py/web2py/gluon/rocket.py", line 1650, in build_environ\n  File "/home/mdipierro/make_web2py/web2py/gluon/rocket.py", line 1401, in read_request_line\nSocketTimeout: Socket timed out before request.\n'
+p105
+s.

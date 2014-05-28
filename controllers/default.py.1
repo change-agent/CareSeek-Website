@@ -1,0 +1,154 @@
+# -*- coding: utf-8 -*-
+# this file is released under public domain and you can use without limitations
+
+#########################################################################
+## This is a sample controller
+## - index is the default action of any application
+## - user is required for authentication and authorization
+## - download is for downloading files uploaded in the db (does streaming)
+## - call exposes all registered services (none by default)
+#########################################################################
+def index():
+    return dict()
+@auth.requires_login()
+def subscribe():
+    check=check_type(request.args(0))
+    if check==1:
+        db.WorkWith.insert(Carer=int(auth.user.id), CareSeeker=int(request.args(0)))
+    if check==2:
+        db.WorkWith.insert(CareSeeker=int(auth.user.id), Carer=int(request.args(0)))
+    redirect(URL('default', 'myProfile', args=request.args(0)))
+    return dict()
+@auth.requires_login()
+def about():
+    users=db(db.auth_user.id>0).select()
+    return dict(users=users)
+def contact():
+    return dict()
+# return 1 if current user is carer, other is care seeker or return 2 
+def check_type(other):
+    other_one=db(db.auth_user.id==other).select()
+    if (auth.user.User_Type=="Carer") and (other_one[0].User_Type=="Care Seeker"):
+        return 1
+    if (auth.user.User_Type=="Care Seeker") and (other_one[0].User_Type=="Carer"):
+        return 2
+    return 0
+
+def find_connection(userID):
+    my_list=None
+    userID=int(userID)
+    if db(db.auth_user.id==userID).select()[0].User_Type=="Care Seeker":
+        my_list=db.executesql('SELECT first_name, last_name, id FROM auth_user WHERE id IN (SELECT Carer FROM WorkWith WHERE CareSeeker={arg1});'.format(arg1=userID))
+        #my_list=db(db.WorkWith.CareSeeker==userID).select(db.WorkWith.Carer)
+    else:
+        #my_list=db(db.WorkWith.Carer==userID).select(db.WorkWith.CareSeeker)
+        my_list=db.executesql('SELECT first_name, last_name, id FROM auth_user WHERE id IN (SELECT CareSeeker FROM WorkWith WHERE Carer={arg1});'.format(arg1=userID))
+    return my_list
+    
+@auth.requires_login()
+def dashboard():
+    # find in the workwith table to see if they already have a connection or not
+    
+   ##return list of forged link here
+   
+    return dict()
+def feedback():
+    return dict()
+def find_relations(user_id):
+    check=check_type(user_id)
+    subscribe=None
+    co_worker="Co-Worker"
+    same=True
+    my_clients=find_connection(user_id)
+    if check==1:
+        same=False
+        
+        subscribe=db((db.WorkWith.Carer==auth.user.id) & (db.WorkWith.CareSeeker==user_id)).select()
+    if check==2:
+        same=False
+        
+        subscribe=db((db.WorkWith.CareSeeker==auth.user.id) & (db.WorkWith.Carer==user_id)).select()
+    
+        
+    return subscribe, same, my_clients, co_worker
+@auth.requires_login()
+def myProfile():
+    user= db(db.auth_user.id==request.args(0)).select().first()
+    subscribe, same, my_clients, co_worker=find_relations(request.args(0))
+    return dict(user=user, subscribe=subscribe, same=same, my_clients=my_clients, co_worker=co_worker)
+
+def mySchedule():
+    return dict()
+def help():
+    return dict()
+def settings():
+    return dict()
+def search():
+    return dict()
+def legal():
+    return dict()
+def privacy():
+    return dict()
+
+def user():
+    
+    """
+    exposes:
+    http://..../[app]/default/user/login
+    http://..../[app]/default/user/logout
+    http://..../[app]/default/user/register
+    http://..../[app]/default/user/profile
+    http://..../[app]/default/user/retrieve_password
+    http://..../[app]/default/user/change_password
+    http://..../[app]/default/user/manage_users (requires membership in
+    use @auth.requires_login()
+        @auth.requires_membership('group name')
+        @auth.requires_permission('read','table name',record_id)
+    to decorate functions that need access control
+    """
+    auth.settings.formstyle = 'bootstrap'
+    auth.settings.register_next = URL('dashboard')
+    auth.settings.logged_url = URL('index')
+
+    auth.settings.login_next = URL('dashboard')
+    return dict(form=auth())
+
+@cache.action()
+def download():
+    """
+    allows downloading of uploaded files
+    http://..../[app]/default/download/[filename]
+    """
+    return response.download(request, db)
+
+
+def call():
+    """
+    exposes services. for example:
+    http://..../[app]/default/call/jsonrpc
+    decorate with @services.jsonrpc the functions to expose
+    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
+    """
+    return service()
+
+
+@auth.requires_signature()
+def data():
+    """
+    http://..../[app]/default/data/tables
+    http://..../[app]/default/data/create/[table]
+    http://..../[app]/default/data/read/[table]/[id]
+    http://..../[app]/default/data/update/[table]/[id]
+    http://..../[app]/default/data/delete/[table]/[id]
+    http://..../[app]/default/data/select/[table]
+    http://..../[app]/default/data/search/[table]
+    but URLs must be signed, i.e. linked with
+      A('table',_href=URL('data/tables',user_signature=True))
+    or with the signed load operator
+      LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
+    """
+    return dict(form=crud())
+
+
+# def loadProfile():
+#     pass

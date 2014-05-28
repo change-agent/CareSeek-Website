@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+{{ block content}}
+<h2>{{=T( request.args(0).replace('_',' ').capitalize() )}}</h2>
+<div id="web2py_user_form">
+{{if request.args(0)=='login'and not auth.is_logged_in():
+    if not 'register' in auth.settings.actions_disabled:
+        form.add_button(T('Register'),URL(args='register', vars={'_next': request.vars._next} if request.vars._next else None),_class='btn')
+pass}}
+{{=form}}
+	{{ pass}}
+    {{if auth.is_logged_in():}}
+        <form method="get" action="{{=URL('default', 'user/logout')}}">
+			<button type="submit" class="btn btn-primary btn-lg">Log out</button>
+		</form>
+    {{pass}}
+    {{if request.args(0)=='register':
+	=form}}
+    {{pass}}
+</div>
+{{end}}
+
+<script language="javascript">
+	<!--jQuery("#web2py_user_form input:visible:enabled:first").focus();
+	{{if request.args(0)=='register':}}
+		web2py_validate_entropy(jQuery('#auth_user_password'),100);
+	{{elif request.args(0)=='change_password':}}
+		web2py_validate_entropy(jQuery('#no_table_new_password'),100);
+	{{pass}}
+//--></script>

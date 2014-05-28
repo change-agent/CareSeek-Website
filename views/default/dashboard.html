@@ -1,0 +1,36 @@
+{{extend 'profile_layout.html'}}
+
+{{block profile_content}}
+    <div class="col-sm-8 col-md-8 main" id="calender">
+        <h1 class="page-header">Schedule</h1>
+        <img class="daily" src="/master/static/images/daily.jpg"/>
+    </div>
+
+    <div class="col-sm-4 col-md-4 main" id="notifications">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h1 class="page-header">Recent News</h1>
+                    <pre>
+Daniel Esposito accepted your employment terms.
+                  <a href=" ">8 hours ago</a>
+                    
+John Davids has confirmed the booking for 10/06 (10 AM).
+                  <a href=" ">12 hours ago</a>
+                    
+Melissa Yuen sent a message.
+                  <a href=" ">20 hours ago</a>
+                    </pre>      
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h1 class="page-header">Notifications</h1>
+                    <pre>
+• <a href="">John Davids: $250 – 10/6</a>
+• <a href="">Melissa Yuen: $500 – 20/5</a>
+                    </pre>            
+			</div>
+        </div> 
+        </div>
+   
+{{end}}

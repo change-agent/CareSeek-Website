@@ -1,0 +1,108 @@
+<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="">
+    <title>CareSeek</title>
+    
+    <!-- Bootstrap core CSS -->
+    {{response.files.append(URL('static','bootstrap.min.css'))}}
+    {{response.files.append(URL('static/css','bootstrap-tagsinput.css'))}}
+    {{response.files.append(URL('static/css', 'star-rating.css'))}}
+    {{include 'web2py_ajax.html'}}
+    
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+        .navbar-inverse .navbar-nav >li>a {
+            color: #E9D6C5;
+        }
+
+        .navbar-inverse {
+            background-color: #222;
+            border-color: #080808;
+        }
+
+        .navbar-inverse .navbar-brand {
+            color: #E9D6C5;
+        }
+		.format {
+			white-space: pre;
+			display: block;
+		}
+
+        .btn-primary {
+            color: #E9D6C5;
+            background-color: #333;
+            border-color: #111;
+        }
+        img {
+            width: 350px;
+            height: 400px;
+            padding: 5px;
+        }
+		.cal {
+            width: 100%;
+            height: 75%;
+            padding: 5px;
+        }
+		.daily {
+            width: 100%;
+            height: 75%;
+            padding: 5px;
+        }
+
+        body {
+            background-color: #F5F5F5;
+            padding: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				{{if auth.is_logged_in():}}
+					<a class="navbar-brand" href="{{=URL('default','dashboard')}}">CareSeek</a>
+				{{else:}}
+					<a class="navbar-brand" href="{{=URL('default','index')}}">CareSeek</a>
+				{{pass}}
+            </div>
+            {{block navbar}}
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href='{{=URL("default", "privacy")}}' id="privacy">Privacy</a></li>
+                    <li><a href='{{=URL("default", "legal")}}' id="legal">Legal</a></li>
+                    <li><a href='{{=URL("default", "feedback")}}' id="feedback">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+            {{end}}
+        </div>
+    </div>
+    {{block page}}
+        <div class="container" id="mainContainer"> 
+            {{block content}}
+            {{end}}
+        </div><!-- /.container -->
+    {{end}}
+    <!-- The javascript =============================================
+    (Placed at the end of the document so the pages load faster) -->
+    <script src="{{=URL('static/js','jquery-1.11.0.min.js')}}"></script>
+    <script src="{{=URL('static/js','bootstrap.min.js')}}"></script>
+    <script src="{{=URL('static/js','formTest.js')}}"></script>
+    <script src="{{=URL('static/js','sanitise.js')}}"></script>
+    <script src="{{=URL('static/js','search.js')}}"></script>
+    <script src="{{=URL('static/js','userReg.js')}}"></script>
+        <script src="{{=URL('static/js','star-rating.js')}}"></script>
+
+</body>
+</html>

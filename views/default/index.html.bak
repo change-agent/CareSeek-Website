@@ -1,0 +1,40 @@
+{{extend 'layout.html'}}
+{{block content}}
+<div class='jumbotron'>
+<h1>CareSeek</h1>
+        <p>An online, end-to-end employment solution for carers and care seekers</p>
+		<pre> 
+		Making new users currently is not functional, please use:
+		carer: daniel 1234
+		care seeker: Khu94 1234
+		</pre>
+        
+        
+    
+{{if auth.is_logged_in():}}
+          <a class="btn btn-primary btn-lg" data-toggle="modal"  href='{{=URL("default", "user/logout")}}'>Logout</a>
+
+    {{else:}}
+    <a class="btn btn-primary btn-lg"  href='{{=URL("default", "user/register")}}'>Sign-up now!</a>
+      <a class="btn btn-primary btn-lg" data-toggle="modal"  href='{{=URL("default", "user/login")}}'>Login</a>
+    {{pass}}
+     </div> 
+      <div class="row">
+        <div class="col-sm-4"> 
+          <h1>Matching</h1>
+          <p class="lead">CareSeek is a single place to search for quality carers. With Advanced Search, you can find carers to suit your particular needs.</p>
+        </div>
+      
+        <div class="col-sm-4"> 
+          <h1>Admin</h1>
+          <p class="lead">CareSeek provides you with a simple interface to manage multiple carers. It also enables you to manage all their shifts – hassle-free.</p>
+        </div>
+
+        <div class="col-sm-4"> 
+          <h1>Value</h1>
+          <p class="lead">Funding for carer services is a limited resource. CareSeek saves you money by cutting overheads associated with third party agencies.</p>
+        </div>
+{{end}}
+   <script src="{{=URL('static','sanitise.js')}}"></script>
+   <script src="{{=URL('static','search.js')}}"></script>
+   <script src="{{=URL('static','userReg.js')}}"></script>

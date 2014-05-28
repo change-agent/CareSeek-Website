@@ -1,0 +1,120 @@
+{{extend 'profile_layout.html'}}
+{{block profile_content}}
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+
+<!--left-->
+<div class="container-fluid">
+	<div class="row">
+	<div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			   <h4 class="text-primary">
+					<p>
+						My {{=co_worker}}s
+				   </p>
+					{{if not same:}}
+					{{if not subscribe:}}
+					   <a href='{{=URL("default", "subscribe", args=user.id)}}' class="btn btn-success">Forge link</a>
+					{{else:}}
+						<button type="button" class="btn btn-primary"> Subscribed</button>
+                         {{if find_rating(1, user.id)==0:}}
+                   <small><a href='{{=URL("default", "rating", args=user.id)}}' >Leave a feedback</a></small>
+                   {{pass}}
+					{{pass}}
+					{{pass}}
+			  </h4>
+			</div>
+			<div class="panel-body"><ul>
+             
+                {{if auth.user.id==user.id:}}
+					{{for client in my_clients:}}
+					{{name=client[0]+" "+client[1]}}
+               <li> 
+				    {{=A(name ,_href=URL('default', 'myProfile',args=client[2]))}} ||
+                {{if find_rating(1, client[2])==0:}}
+                {{=A("Leave a feedback",_href=URL('default', 'rating',args=client[2]))}}<br></li>
+					{{pass}}{{pass}}
+                {{else:}}
+                {{for client in my_clients:}}
+               <li>
+					{{name=client[0]+" "+client[1]}}
+				    {{=A(name ,_href=URL('default', 'myProfile',args=client[2]))}}<br></li>
+                {{pass}}
+                {{pass}}</ul>
+			</div>
+		</div>
+	</div>
+
+	<!--Main content start-->
+	<div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
+		<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h1 class="text-success">
+					{{=user.first_name}} {{=user.last_name}}
+					{{if(user.id == auth.user.id):}}
+						<a href='{{=URL("default", "settings")}}' class="btn">Edit</a>
+					{{pass}}
+			</h1>
+			<div class="col-md-6">
+				<img class="img-responsive" src="{{=URL('download',args=user.MyPict)}}">
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+                        {{ value = ''
+							for item in interests:
+								value += "," + item
+								print item
+                        }}
+                        {{pass}}
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<p><strong>User type:</strong> {{=user.User_Type}}</p>
+						<p><strong>Age:</strong> {{=user.Age}}</p>
+						<p><strong>Gender:</strong> {{=user.Gender}}</p>
+						<p><strong>Email:</strong> {{=user.email}}</p>
+						<p><strong>Contact:</strong> {{=user.Phone}}</p>
+						<p><strong>Interests:</strong> <input class="col-xs-11 col-sm-11 col-md-11" type="text" id="interests" name="interests" value='{{=value}}' data-role="tagsinput"></input></p>
+						{{if(user.User_Type == "Carer"):}}
+							<p><strong>View my Résumé:</strong> <a href="{{=cvUrl}}">Cick to view</a> </p>
+						{{pass}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!--ENd main content -->
+
+	<!--right-->
+{{overall, re, pu, per, comment=rated(user.id)}}
+	<div class = "col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			   <h4 class="text-primary">
+				   Ratings
+			  </h4>
+                
+             
+                    Overall: <input id="input-21e" value="{{=overall}}" type="number" class="rating" readonly=true min=0 max=5 step=0.5 data-size="xs" >
+                
+                    Reliability: <input id="input-21e" value="{{=re}}" type="number" class="rating" readonly=true min=0 max=5 step=0.5 data-size="xs" >
+               
+                   Punctuality: <input id="input-21e" value="{{=pu}}" type="number" class="rating" readonly=true min=0 max=5 step=0.5 data-size="xs" >
+                
+                    Personality: <input id="input-21e" value="{{=per}}" type="number" class="rating" readonly=true min=0 max=5 step=0.5 data-size="xs" >
+               
+			</div>
+			<div class="panel-body">
+                {{for com in comment:}}
+                <p>
+                    {{=comt}}
+                    <hr>
+                </p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class = "col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+			<p><strong>About Me:</strong></p>
+			<pre><div>{{=user.AboutMe}}<div></pre>
+		</div>
+	</div>
+</div>
+</div> <!-- end contianer -->
+<script src="{{=URL('static/js','bootstrap-tagsinput.min.js')}}"></script>

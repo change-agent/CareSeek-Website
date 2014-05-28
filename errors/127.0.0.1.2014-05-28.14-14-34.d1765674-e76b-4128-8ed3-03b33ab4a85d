@@ -1,0 +1,815 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'NoneType' object has no attribute 'Interests'"
+p3
+sS'layer'
+p4
+S'C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\views\\default/settings.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->\\r\\n<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\\r\\n    <meta charset="utf-8">\\r\\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\\r\\n    <meta name="viewport" content="width=device-width, initial-scale=1">\\r\\n    <meta name="description" content="">\\r\\n    <meta name="author" content="">\\r\\n    <link rel="shortcut icon" href="">\\r\\n    <title>CareSeek</title>\\r\\n    \\r\\n    <!-- Bootstrap core CSS -->\\r\\n    \', escape=False)\nresponse.files.append(URL(\'static\',\'bootstrap.min.css\'))\nresponse.write(\'\\r\\n    \', escape=False)\nresponse.files.append(URL(\'static/css\',\'bootstrap-tagsinput.css\'))\nresponse.write(\'\\r\\n    \', escape=False)\nresponse.files.append(URL(\'static/css\', \'star-rating.css\'))\nresponse.write(\'\\r\\n    \', escape=False)\nresponse.write(\'<script type="text/javascript"><!--\\n    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).\\n    var w2p_ajax_confirm_message = "\', escape=False)\nresponse.write(T(\'Are you sure you want to delete this object?\'))\nresponse.write(\'";\\n    var w2p_ajax_disable_with_message = "\', escape=False)\nresponse.write(T(\'Working...\'))\nresponse.write(\'";\\n    var w2p_ajax_date_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d\'))\nresponse.write(\'";\\n    var w2p_ajax_datetime_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d %H:%M:%S\'))\nresponse.write(\'";\\n    var ajax_error_500 = \\\'\', escape=False)\nresponse.write(T.M(\'An error occured, please [[reload %s]] the page\') % URL(args=request.args, vars=request.get_vars))\nresponse.write("\'\\n    //--></script>\\n", escape=False)\nresponse.files.insert(0,URL(\'static\',\'js/jquery.js\'))\nresponse.files.insert(1,URL(\'static\',\'css/calendar.css\'))\nresponse.files.insert(2,URL(\'static\',\'js/calendar.js\'))\nresponse.files.insert(3,URL(\'static\',\'js/web2py.js\'))\nresponse.include_meta()\nresponse.include_files()\nresponse.write(\'\\n\', escape=False)\nresponse.write(\'\\r\\n    \\r\\n    <!-- Custom styles for this template -->\\r\\n    <style type="text/css">\\r\\n        .navbar-inverse .navbar-nav >li>a {\\r\\n            color: #E9D6C5;\\r\\n        }\\r\\n\\r\\n        .navbar-inverse {\\r\\n            background-color: #457;\\r\\n            border-color: #080808;\\r\\n        }\\r\\n\\r\\n        .navbar-inverse .navbar-brand {\\r\\n            color: #E9D6C5;\\r\\n        }\\r\\n\\t\\t.format {\\r\\n\\t\\t\\twhite-space: pre;\\r\\n\\t\\t\\tdisplay: block;\\r\\n\\t\\t}\\r\\n\\r\\n        .btn-primary {\\r\\n            color: #E9D6C5;\\r\\n            background-color: #333;\\r\\n            border-color: #111;\\r\\n        }\\r\\n        img {\\r\\n            width: 400px;\\r\\n            height: 400px;\\r\\n            padding: 5px;\\r\\n        }\\r\\n\\r\\n        body {\\r\\n            background-color: #F5F5F5;\\r\\n            padding: 60px;\\r\\n        }\\r\\n    </style>\\r\\n</head>\\r\\n\\r\\n<body>\\r\\n    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">\\r\\n        <div class="container">\\r\\n            <div class="navbar-header">\\r\\n                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">\\r\\n                    <span class="sr-only">Toggle navigation</span>\\r\\n                    <span class="icon-bar"></span>\\r\\n                    <span class="icon-bar"></span>\\r\\n                    <span class="icon-bar"></span>\\r\\n                </button>\\r\\n\\t\\t\\t\\t\', escape=False)\nif auth.is_logged_in():\n    response.write(\'\\r\\n\\t\\t\\t\\t\\t<a class="navbar-brand" href="\', escape=False)\n    response.write(URL(\'default\',\'dashboard\'))\n    response.write(\'">CareSeek</a>\\r\\n\\t\\t\\t\\t\', escape=False)\nelse:\n    response.write(\'\\r\\n\\t\\t\\t\\t\\t<a class="navbar-brand" href="\', escape=False)\n    response.write(URL(\'default\',\'index\'))\n    response.write(\'">CareSeek</a>\\r\\n\\t\\t\\t\\t\', escape=False)\n    pass\nresponse.write(\'\\r\\n            </div>\\r\\n            \', escape=False)\nresponse.write(\'\\n    <div class="navbar-collapse collapse">\\n                <ul class="nav navbar-nav navbar-right">\\n\\t\\t\\t\\t\\t<li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "test"))\nresponse.write(\'\\\' id="demo">Demo</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "mySchedule"))\nresponse.write(\'\\\' id="schedule">Schedule</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "myProfile", args=auth.user.id))\nresponse.write(\'\\\' id="profile">My Profile</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "settings"))\nresponse.write(\'\\\' id="usrSettings">Settings</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "help"))\nresponse.write(\'\\\' id="Help">Help</a></li>\\n                    <li><a  href=\\\'\', escape=False)\nresponse.write(URL("default", "user/logout"))\nresponse.write(\'\\\' id="logout">Logout</a></li>\\n                    <li><a href=\\\'\', escape=False)\nresponse.write(URL("default", "search"))\nresponse.write(\'\\\' id="searchPage">Search</a></li>\\n                </ul>\\n            </div>\\n    \', escape=False)\nresponse.write(\'\\r\\n        </div>\\r\\n    </div>\\r\\n    \', escape=False)\nresponse.write(\'\\n    <div class="container-fluid">\\n            \', escape=False)\nresponse.write(\'\\n\\n<div class="container-fluid">\\n    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">\\n        <h1 class="page-header">Settings</h1>\\n        <div class="col-xs-12 col-sm-12 col-md-12">\\n            <div class="row">\\n                <!-- Current Email -->\\n                <label>Your Email:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11" id="email" name="email"> \', escape=False)\nresponse.write(user.email)\nresponse.write(\' </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editEmail">\\n                    </div>\\n                </div>\\n                <!-- Change email form -->\\n                    <div class="panel-body" id="editEmailBox" style="display: none">\\n                        <form role=\\\'form\\\'>\\n                            <div class="form-group">\\n                                <label>Enter new email</label>\\n                                <div class="input-group">\\n                                    <input type="email" class="form-control" id="emailInput" name="newEmail" placeholder="example@email.com">\\n                                    <span class="input-group-btn">\\n                                        <input class="btn btn-primary pull-right" type="submit" name="submit" value="Save" id="saveEmail" onclick="ajax(\\\'\', escape=False)\nresponse.write(URL(\'default\', \'updateEmail\'))\nresponse.write(\'\\\',[\\\'newEmail\\\'],\\\'email\\\');"></input>\\n                                    </span>\\n                                </div>\\n                            </div>\\n                        </form>\\n                    </div>\\n             </div> <!-- End of email setting -->\\n\\n            <div class="row">\\n                <!-- Current password -->\\n                <label>Your Password:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11"> \\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2 </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editPass">\\n                    </div>\\n                </div>\\n                <!-- Change Pass form -->\\n                <div class="panel-body" id="editPassBox" style="display: none">\\n                    <form role=\\\'form\\\'>\\n                       <div class="form-group">\\n                            <label for="">Old password</label>\\n                            <div class="input-group">\\n                                <input type="password" class="form-control" id="oldPass" name="oldPass" placeholder="Enter old password">\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <div class="form-group">\\n                            <label for="">New password</label>\\n                            <div class="input-group">\\n                                <input type="password" class="form-control" id="newPass" name="newPass" placeholder="Enter new password...">\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <div class="form-group">\\n                            <label for="">Confirm new password</label>\\n                            <div class="input-group">\\n                                <input type="password" class="form-control" id="confNewPass" name="confNewPass" placeholder="Enter new password again...">\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <input class="btn btn-primary pull-right" type="submit" name="submit" value="Save" id="saveEmail" onclick="ajax(\\\'\', escape=False)\nresponse.write(URL(\'default\', \'updatePass\'))\nresponse.write(\'\\\',[\\\'oldPass\\\', \\\'newPass\\\', \\\'confNewPass\\\'],\\\'oldPass\\\');"></input>\\n                    </form>\\n                </div>\\n             </div> <!-- End of password setting -->\\n\\n            <div class="row">\\n                <!-- Current Interests -->\\n                <label>Your Interests:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11">\\n                        \', escape=False)\nvalue = \'\'\nresponse.write(\'\\n                        \', escape=False)\nfor item in role.Interests:\n    value += item\n    response.write(\'\\n                        \', escape=False)\n    pass\nresponse.write(\'\\n                        <input class="col-xs-11 col-sm-11 col-md-11" type="text" id="interests" name="interests" value=\\\'\', escape=False)\nresponse.write(value)\nresponse.write(\'\\\' data-role="tagsinput"></input>\\n                    </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editInterests">\\n                    </div>\\n                </div>\\n                <!-- Change Interests form -->\\n                <div class="panel-body" id="editInterestBox" style="display:none">\\n                    <form role=\\\'form\\\'>\\n                       <div class="form-group">\\n                            <label for="">Update Interests:</label>\\n                            <div class="input-group">\\n                                <input type="text" id="newInterests" name="newInterests" value=\\\'\', escape=False)\nresponse.write(value)\nresponse.write(\'\\\' data-role="tagsinput"/>\\n                            </div>\\n                            <input class="btn btn-primary pull-right" type="submit" name="newInterests" value="Save" id="saveInterests" onclick="ajax(\\\'\', escape=False)\nresponse.write(URL(\'default\', \'updateInterest\'))\nresponse.write(\'\\\',[\\\'newInterests\\\'],\\\'interests\\\');"></input>\\n                        </div>\\n                        \\n                    </form>\\n                </div>\\n             </div> <!-- End of interests setting --> \\n            \\n            <div class="row">\\n                <!-- Current Contact -->\\n                <label>Your contact number:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11"> \', escape=False)\nresponse.write(user.Phone)\nresponse.write(\' </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editPhone" name="editPhone">\\n                    </div>\\n                </div>\\n                <!-- Change Contact form -->\\n                <div class="panel-body" id="editPhoneBox" style="display:none">\\n                    <form role=\\\'form\\\'>\\n                       <div class="form-group">\\n                            <label for="">Update contact number</label>\\n                            <div class="input-group">\\n                                <input type="text" class="form-control" id="newPhoneInput" name="newPhoneInput" placeholder="Enter new contact number">\\n                                <span class="input-group-btn">\\n                                    <input class="btn btn-primary pull-right" type="submit" value="Save" id="savePhone" onclick="ajax(\\\'\', escape=False)\nresponse.write(URL(\'default\', \'updatePhone\'))\nresponse.write(\'\\\',[\\\'newPhoneInput\\\'],\\\'editPhone\\\');"></input>\\n                                </span>\\n                            </div>\\n                        </div>\\n                    </form>\\n                </div>\\n             </div> <!-- End of Contact setting --> \\n            \\n            <div class="row">\\n                <!-- Current Desc -->\\n                <label>About me:</label>\\n                <div class="row">\\n                    <pre class="col-xs-11 col-sm-11 col-md-11" name="editAboutMe"> \', escape=False)\nresponse.write(user.AboutMe)\nresponse.write(\' </pre>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editAboutMe">\\n                    </div>\\n                </div>\\n                <!-- Change Contact form -->\\n                <div class="panel-body" id="editAboutMeBox" style="display:none">\\n                    <form role=\\\'form\\\'>\\n                       <div class="form-group">\\n                            <label for="">Update About me</label>\\n                            <div class="input-group">\\n                                <textarea type="text" class="form-control" id="newAboutMe" name="newAboutMe" value="heyho">\', escape=False)\nresponse.write(user.AboutMe)\nresponse.write(\'</textarea>\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <input class="btn btn-primary pull-right" type="submit" value="Save" id="saveAboutMe" onclick="ajax(\\\'\', escape=False)\nresponse.write(URL(\'default\', \'updateDesc\'))\nresponse.write(\'\\\',[\\\'newAboutMe\\\'],\\\'editAboutMe\\\');"></input>\\n                    </form>\\n                </div>\\n             </div> <!-- End of Contact setting -->\\n\\n            \', escape=False)\nif user.User_Type == "Carer":\n    response.write(\'\\n                <div class="row">\\n                    <!-- Current CV -->\\n                    <label>Update your CV:</label>\\n                    <div class="row">\\n                        <div class="col-xs-11 col-sm-11 col-md-11"> <a href="\', escape=False)\n    response.write(cvUrl)\n    response.write(\'">Cick to view</a> </div>\\n                        <div class="col-xs-1 col-sm-1 col-md-1">\\n                            <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editCV" name="editCV">\\n                        </div>\\n                    </div>\\n\\n                    <!-- Change CV form -->\\n                    <div class="panel-body" id="editCVBox" style="display:none">\\n                        <form role=\\\'form\\\'>\\n                           <div class="form-group">\\n                                <label for="">Upload new CV</label>\\n                                <div class="input-group">\\n                                    <input type="file" id="newCV" name="newCV" title="Search for a file to add">\\n                                </div>\\n                            </div>\\n                            <input class="btn btn-primary pull-right" type="submit" value="Save" id="saveCV" onclick="ajax(\\\'\', escape=False)\n    response.write(URL(\'default\', \'updateCV\'))\n    response.write(\'\\\',[\\\'newCV\\\'],\\\'editCV\\\');"></input>\\n                        </form>\\n                    </div>\\n                 </div> <!-- End of CV setting --> \\n            \', escape=False)\n    pass\nresponse.write(\'\\n         </div>\\n    </div>  \\n</div>\\n<script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'settings.js\'))\nresponse.write(\'"></script>\\n<script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'bootstrap-tagsinput.min.js\'))\nresponse.write(\'"></script>\\n\', escape=False)\nresponse.write(\'\\n    </div>\\n\', escape=False)\nresponse.write(\'\\r\\n    <!-- The javascript =============================================\\r\\n    (Placed at the end of the document so the pages load faster) -->\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'jquery-1.11.0.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'bootstrap.min.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'formTest.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'sanitise.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'search.js\'))\nresponse.write(\'"></script>\\r\\n    <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'userReg.js\'))\nresponse.write(\'"></script>\\r\\n        <script src="\', escape=False)\nresponse.write(URL(\'static/js\',\'star-rating.js\'))\nresponse.write(\'"></script>\\r\\n\\r\\n</body>\\r\\n</html>\\r\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.AttributeError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.AttributeError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.AttributeError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.AttributeError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.AttributeError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.AttributeError object>'
+p23
+sS'__reduce__'
+p24
+S'<built-in method __reduce__ of exceptions.AttributeError object>'
+p25
+sS'__str__'
+p26
+S"<method-wrapper '__str__' of exceptions.AttributeError object>"
+p27
+sS'__format__'
+p28
+S'<built-in method __format__ of exceptions.AttributeError object>'
+p29
+sS'__getattribute__'
+p30
+S"<method-wrapper '__getattribute__' of exceptions.AttributeError object>"
+p31
+sS'__class__'
+p32
+S"<type 'exceptions.AttributeError'>"
+p33
+sS'__unicode__'
+p34
+S'<built-in method __unicode__ of exceptions.AttributeError object>'
+p35
+sS'__delattr__'
+p36
+S"<method-wrapper '__delattr__' of exceptions.AttributeError object>"
+p37
+sS'__subclasshook__'
+p38
+S'<built-in method __subclasshook__ of type object>'
+p39
+sS'__repr__'
+p40
+S"<method-wrapper '__repr__' of exceptions.AttributeError object>"
+p41
+sS'args'
+p42
+S'("\'NoneType\' object has no attribute \'Interests\'",)'
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.AttributeError object>'
+p47
+sS'__doc__'
+p48
+S"'Attribute not found.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.AttributeError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S"'NoneType' object has no attribute 'Interests'"
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S's\x0c]\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>CareSeek2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-639eda4e-e0f5-43df-b6b1-3e039d8c91ec<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_careseek2</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-520a05d8-b145-4b30-bd7d-4cc51d44ee0b<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-GB,en;q=0.8,en-US;q=0.6,vi;q=0.4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-520a05d8-b145-4b30-bd7d-4cc51d44ee0b; session_id_careseek2=127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e; session_id_admin=127.0.0.1-639eda4e-e0f5-43df-b6b1-3e039d8c91ec</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/CareSeek2/default/rating</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/CareSeek2/default/settings</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>51111</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>aun-021</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\CareSeek2\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x31aedf0: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;10.9.153.104&#x27;, &#x27;::1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;aun-021&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;&lt;ask&gt;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-GB,en;q=0.8,en-US;q=0.6,vi;q=0.4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-520a05d8-b145-4b30-bd7d-4cc51d44ee0b; session_id_careseek2=127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e; session_id_admin=127.0.0.1-639eda4e-e0f5-43df-b6b1-3e039d8c91ec</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/CareSeek2/default/rating</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>10.9.153.104</div></td></tr><tr><td><div>aun-021.itsunami.com.au</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>aun-021</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/CareSeek2/default/settings</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>51111</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/CareSeek2/default/settings</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>aun-021</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.9.5-stable+timestamp.2014.03.20.22.57.13</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x004560D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x01FDA148&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x07E1DDB0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x004560D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x01FDA148&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x07E1DDB0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>settings</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\CareSeek2\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x31aedf0: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;10.9.153.104&#x27;, &#x27;::1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;aun-021&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;&lt;ask&gt;&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>10.9.153.104</div></td></tr><tr><td><div>aun-021.itsunami.com.au</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>aun-021</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.9.5-stable+timestamp.2014.03.20.22.57.13</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2014, 5, 28, 14, 14, 34, 593000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/CareSeek2/default/settings</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2014, 5, 28, 4, 14, 34, 593000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uuid</td><td style="vertical-align:top;">:</td><td><div>CareSeek2/127.0.0.1.2014-05-28.14-14-34.d1765674-e76b-4128-8ed3-03b33ab4a85d</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x08981130&gt;</div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'C:\\home\\mdipierro\\make_web2py\\web2py\\gluon\\restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+sS'lnum'
+p66
+I220
+sS'lines'
+p67
+(dp68
+sS'call'
+p69
+S'(code=r"response.write(\'<!-- saved from url=(0050)http:/...pt>\\r\\n\\r\\n</body>\\r\\n</html>\\r\\n\', escape=False)", environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, \'CAT\': <class \'gluon.html.CAT\'>, \'CENTER\': <class \'gluon.html.CENTER\'>, ...}, layer=r\'C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\views\\default/settings.html\')'
+p70
+sS'func'
+p71
+S'restricted'
+p72
+sa(dp73
+g62
+S'C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\views\\default\\settings.html'
+p74
+sg64
+(dp75
+S'span'
+p76
+S'undefined'
+p77
+ssg66
+I63
+sg67
+(dp78
+I64
+S'    value += item'
+p79
+sI65
+S"    response.write('\\n                        ', escape=False)"
+p80
+sI66
+S'    pass'
+p81
+sI67
+S'response.write(\'\\n                        <input class="col-xs-11 col-sm-11 col-md-11" type="text" id="interests" name="interests" value=\\\'\', escape=False)'
+p82
+sI68
+S'response.write(value)'
+p83
+sI69
+S'response.write(\'\\\' data-role="tagsinput"></input>\\n                    </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editInterests">\\n                    </div>\\n                </div>\\n                <!-- Change Interests form -->\\n                <div class="panel-body" id="editInterestBox" style="display:none">\\n                    <form role=\\\'form\\\'>\\n                       <div class="form-group">\\n                            <label for="">Update Interests:</label>\\n                            <div class="input-group">\\n                                <input type="text" id="newInterests" name="newInterests" value=\\\'\', escape=False)'
+p84
+sI70
+S'response.write(value)'
+p85
+sI71
+S'response.write(\'\\\' data-role="tagsinput"/>\\n                            </div>\\n                            <input class="btn btn-primary pull-right" type="submit" name="newInterests" value="Save" id="saveInterests" onclick="ajax(\\\'\', escape=False)'
+p86
+sI72
+S"response.write(URL('default', 'updateInterest'))"
+p87
+sI73
+S'response.write(\'\\\',[\\\'newInterests\\\'],\\\'interests\\\');"></input>\\n                        </div>\\n                        \\n                    </form>\\n                </div>\\n             </div> <!-- End of interests setting --> \\n            \\n            <div class="row">\\n                <!-- Current Contact -->\\n                <label>Your contact number:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11"> \', escape=False)'
+p88
+sI54
+S'response.write(\'\\n\\n<div class="container-fluid">\\n    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">\\n        <h1 class="page-header">Settings</h1>\\n        <div class="col-xs-12 col-sm-12 col-md-12">\\n            <div class="row">\\n                <!-- Current Email -->\\n                <label>Your Email:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11" id="email" name="email"> \', escape=False)'
+p89
+sI55
+S'response.write(user.email)'
+p90
+sI56
+S'response.write(\' </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editEmail">\\n                    </div>\\n                </div>\\n                <!-- Change email form -->\\n                    <div class="panel-body" id="editEmailBox" style="display: none">\\n                        <form role=\\\'form\\\'>\\n                            <div class="form-group">\\n                                <label>Enter new email</label>\\n                                <div class="input-group">\\n                                    <input type="email" class="form-control" id="emailInput" name="newEmail" placeholder="example@email.com">\\n                                    <span class="input-group-btn">\\n                                        <input class="btn btn-primary pull-right" type="submit" name="submit" value="Save" id="saveEmail" onclick="ajax(\\\'\', escape=False)'
+p91
+sI57
+S"response.write(URL('default', 'updateEmail'))"
+p92
+sI58
+S'response.write(\'\\\',[\\\'newEmail\\\'],\\\'email\\\');"></input>\\n                                    </span>\\n                                </div>\\n                            </div>\\n                        </form>\\n                    </div>\\n             </div> <!-- End of email setting -->\\n\\n            <div class="row">\\n                <!-- Current password -->\\n                <label>Your Password:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11"> \\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2\\xe2\\x80\\xa2 </div>\\n                    <div class="col-xs-1 col-sm-1 col-md-1 ">\\n                        <input type="submit" name="submit" value="Edit" class="btn btn-primary pull-right" id="editPass">\\n                    </div>\\n                </div>\\n                <!-- Change Pass form -->\\n                <div class="panel-body" id="editPassBox" style="display: none">\\n                    <form role=\\\'form\\\'>\\n                       <div class="form-group">\\n                            <label for="">Old password</label>\\n                            <div class="input-group">\\n                                <input type="password" class="form-control" id="oldPass" name="oldPass" placeholder="Enter old password">\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <div class="form-group">\\n                            <label for="">New password</label>\\n                            <div class="input-group">\\n                                <input type="password" class="form-control" id="newPass" name="newPass" placeholder="Enter new password...">\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <div class="form-group">\\n                            <label for="">Confirm new password</label>\\n                            <div class="input-group">\\n                                <input type="password" class="form-control" id="confNewPass" name="confNewPass" placeholder="Enter new password again...">\\n                                <span class="input-group-addon"></span>\\n                            </div>\\n                        </div>\\n                        <input class="btn btn-primary pull-right" type="submit" name="submit" value="Save" id="saveEmail" onclick="ajax(\\\'\', escape=False)'
+p93
+sI59
+S"response.write(URL('default', 'updatePass'))"
+p94
+sI60
+S'response.write(\'\\\',[\\\'oldPass\\\', \\\'newPass\\\', \\\'confNewPass\\\'],\\\'oldPass\\\');"></input>\\n                    </form>\\n                </div>\\n             </div> <!-- End of password setting -->\\n\\n            <div class="row">\\n                <!-- Current Interests -->\\n                <label>Your Interests:</label>\\n                <div class="row">\\n                    <div class="col-xs-11 col-sm-11 col-md-11">\\n                        \', escape=False)'
+p95
+sI61
+S"value = ''"
+p96
+sI62
+S"response.write('\\n                        ', escape=False)"
+p97
+sI63
+S'for item in role.Interests:'
+p98
+ssg69
+S'()'
+p99
+sg71
+S'<module>'
+p100
+sasS'pyver'
+p101
+S'Python 2.7.6: C:\\Users\\4524\\Documents\\web2py_win\\web2py\\web2py.exe (prefix: C:\\Python27)'
+p102
+sS'session'
+p103
+g57
+(S's_\x11\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>3600</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>90ae3e55-f1aa-4fb1-bfc1-19fdd0f7167a</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2014, 5, 28, 14, 14, 34, 593000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">AboutMe</td><td style="vertical-align:top;">:</td><td><div>Roy Dowling (1901\xe2\x80\x931969) was a senior commander in the Royal Australian Navy (RAN). He graduated from the Royal Australian Naval College in 1919 and was given command of the sloop HMAS Swan in 1937. During World War II, he saw action in the Mediterranean aboard HMS Naiad (surviving her sinking in 1942), served as Deputy Chief of Naval Staff, and commanded HMAS Hobart in the South West Pacific, earning the Distinguished Service Order. Dowling took command of the RAN&#x27;s first aircraft carrier, HMAS Sydney, in 1948. He rose to become Chief of Naval Staff (CNS), the RAN&#x27;s highest-ranking position, from 1955 until 1959. As CNS he had to deal with shortages of money, manpower and equipment, and with the increasing role of the United States in Australia&#x27;s defence planning at the expense of traditional ties with Britain. Knighted in 1957, he served as Chairman of the Chiefs of Staff Committee from 1959 until 1961, when he retired. In 1963 he was appointed a Knight Commander of the Royal Victorian Order and becam</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">Age</td><td style="vertical-align:top;">:</td><td><div>23L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">Gender</td><td style="vertical-align:top;">:</td><td><div>Female</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">MyPict</td><td style="vertical-align:top;">:</td><td><div>auth_user.MyPict.a8232683f6055965.50656e6775696e732e6a7067.jpg</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">Phone</td><td style="vertical-align:top;">:</td><td><div>78978979L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">User_Type</td><td style="vertical-align:top;">:</td><td><div>Care Seeker</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>nhim@94mail.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>Vic</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>17L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>Smith</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">username</td><td style="vertical-align:top;">:</td><td><div>Annie</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">14</td><td style="vertical-align:top;">:</td><td><div>user_17</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_orderby</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_query</td><td style="vertical-align:top;">:</td><td><div>db.Carer.id&gt;0</div></td></tr></table></div>'
+tRp104
+sS'etype'
+p105
+S"<type 'exceptions.AttributeError'>"
+p106
+sS'date'
+p107
+S'Wed May 28 14:14:35 2014'
+p108
+sS'response'
+p109
+g57
+(S's\x843\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x08981BA0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_careseek2</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>/CareSeek2/static/js/jquery.js</div></td></tr><tr><td><div>/CareSeek2/static/css/calendar.css</div></td></tr><tr><td><div>/CareSeek2/static/js/calendar.js</div></td></tr><tr><td><div>/CareSeek2/static/js/web2py.js</div></td></tr><tr><td><div>/CareSeek2/static/bootstrap.min.css</div></td></tr><tr><td><div>/CareSeek2/static/css/bootstrap-tagsinput.css</div></td></tr><tr><td><div>/CareSeek2/static/css/star-rating.css</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="brand" href="http://www.web2py.com/"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Home</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/CareSeek2/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div><span class="highlighted">web2py</span></div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>My Sites</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>This App</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/CareSeek2</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Controller&#x27;&gt;, False, &#x27;/admin/default/edit/CareSeek2/controllers/default.py&#x27;), (&lt;lazyT &#x27;View&#x27;&gt;, False, &#x27;/admin/default/edit/CareSeek2/views/default/settings.html&#x27;), (&lt;lazyT &#x27;Layout&#x27;&gt;, False, &#x27;/admin/default/edit/CareSeek2/views/layout.html&#x27;), (&lt;lazyT &#x27;Stylesheet&#x27;&gt;, False, &#x27;/admin/default/edit/CareSeek2/static/css/web2py.css&#x27;), (&lt;lazyT &#x27;DB Model&#x27;&gt;, False, &#x27;/admin/default/edit/CareSeek2/models/db.py&#x27;), (&lt;lazyT &#x27;Menu Model&#x27;&gt;, False, &#x27;/admin/default/edit/CareSeek2/models/menu.py&#x27;), (&lt;lazyT &#x27;Database&#x27;&gt;, False, &#x27;/CareSeek2/appadmin/index&#x27;), (&lt;lazyT &#x27;Errors&#x27;&gt;, False, &#x27;/admin/default/errors/CareSeek2&#x27;), (&lt;lazyT &#x27;About&#x27;&gt;, False, &#x27;/admin/default/about/CareSeek2&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Download&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/download&#x27;), (&lt;lazyT &#x27;Support&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/support&#x27;), (&lt;lazyT &#x27;Demo&#x27;&gt;, False, &#x27;http://web2py.com/demo_admin&#x27;), (&lt;lazyT &#x27;Quick Examples&#x27;&gt;, False, &#x27;http://web2py.com/examples/default/examples&#x27;), (&lt;lazyT &#x27;FAQ&#x27;&gt;, False, &#x27;http://web2py.com/AlterEgo&#x27;), (&lt;lazyT &#x27;Videos&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/videos/&#x27;), (&lt;lazyT &#x27;Free Applications&#x27;&gt;, False, &#x27;http://web2py.com/appliances&#x27;), (&lt;lazyT &#x27;Plugins&#x27;&gt;, False, &#x27;http://web2py.com/plugins&#x27;), (&lt;lazyT &#x27;Layouts&#x27;&gt;, False, &#x27;http://web2py.com/layouts&#x27;), (&lt;lazyT &#x27;Recipes&#x27;&gt;, False, &#x27;http://web2pyslices.com/&#x27;), (&lt;lazyT &#x27;Semantic&#x27;&gt;, False, &#x27;http://web2py.com/semantic&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentation</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Preface&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/00&#x27;), (&lt;lazyT &#x27;Introduction&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/01&#x27;), (&lt;lazyT &#x27;Python&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/02&#x27;), (&lt;lazyT &#x27;Overview&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/03&#x27;), (&lt;lazyT &#x27;The Core&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/04&#x27;), (&lt;lazyT &#x27;The Views&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/05&#x27;), (&lt;lazyT &#x27;Database&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/06&#x27;), (&lt;lazyT &#x27;Forms and Validators&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/07&#x27;), (&lt;lazyT &#x27;Email and SMS&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/08&#x27;), (&lt;lazyT &#x27;Access Control&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/09&#x27;), (&lt;lazyT &#x27;Services&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/10&#x27;), (&lt;lazyT &#x27;Ajax Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/11&#x27;), (&lt;lazyT &#x27;Components and Plugins&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/12&#x27;), (&lt;lazyT &#x27;Deployment Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/13&#x27;), (&lt;lazyT &#x27;Other Recipes&#x27;&gt;, False, &#x27;http://www.web2py.com/book/default/chapter/14&#x27;), (&lt;lazyT &#x27;Buy this book&#x27;&gt;, False, &#x27;http://stores.lulu.com/web2py&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Community</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div>[(&lt;lazyT &#x27;Groups&#x27;&gt;, False, &#x27;http://www.web2py.com/examples/default/usergroups&#x27;), (&lt;lazyT &#x27;Twitter&#x27;&gt;, False, &#x27;http://twitter.com/web2py&#x27;), (&lt;lazyT &#x27;Live Chat&#x27;&gt;, False, &#x27;http://webchat.freenode.net/?channels=web2py&#x27;)]</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div>[(&#x27;plugin_wiki&#x27;, False, &#x27;http://web2py.com/examples/default/download&#x27;), (&lt;lazyT &#x27;Other Plugins&#x27;&gt;, False, &#x27;http://web2py.com/plugins&#x27;), (&lt;lazyT &#x27;Layout Plugins&#x27;&gt;, False, &#x27;http://web2py.com/layouts&#x27;)]</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div>web2py, python, framework</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/settings/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_key</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_careseek2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;C:\\\\Users\\\\4524\\\\Documents\\\\web2py_win\\\\web2py\\\\applications\\\\CareSeek2\\\\sessions\\\\127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e&#x27;, mode &#x27;rb+&#x27; at 0x07DAB230&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\sessions\\127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>1955d9896200f978d9940ca2c1b288c0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-3f996de7-706e-46ce-8c3b-d1be0984d13e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_careseek2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>CareSeek2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Careseek2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/settings.html</div></td></tr></table></div>'
+tRp110
+sS'locals'
+p111
+(dp112
+S'Service'
+p113
+S"<class 'gluon.tools.Service'>"
+p114
+sS'OBJECT'
+p115
+S"<class 'gluon.html.OBJECT'>"
+p116
+sS'SQLDB'
+p117
+S"<class 'gluon.dal.DAL'>"
+p118
+sg103
+S"<Storage {'auth': <Storage {'hmac_key': '90ae3e5...b6b8b', 'd34d2259-4913-4027-9351-358096c5087f']}>"
+p119
+sS'LINK'
+p120
+S"<class 'gluon.html.LINK'>"
+p121
+sS'BR'
+p122
+S"<class 'gluon.html.BR'>"
+p123
+sS'local_import'
+p124
+S'<function <lambda>>'
+p125
+sS'OPTGROUP'
+p126
+S"<class 'gluon.html.OPTGROUP'>"
+p127
+sS'__package__'
+p128
+S'None'
+p129
+sS'PRE'
+p130
+S"<class 'gluon.html.PRE'>"
+p131
+sS'IS_INT_IN_RANGE'
+p132
+S"<class 'gluon.validators.IS_INT_IN_RANGE'>"
+p133
+sS'IS_LOWER'
+p134
+S"<class 'gluon.validators.IS_LOWER'>"
+p135
+sS'IS_STRONG'
+p136
+S"<class 'gluon.validators.IS_STRONG'>"
+p137
+sS'cache'
+p138
+S'<gluon.cache.Cache object>'
+p139
+sS'IS_IN_DB'
+p140
+S"<class 'gluon.validators.IS_IN_DB'>"
+p141
+sS'TAG'
+p142
+S'<gluon.html.__TAG__ object>'
+p143
+sS'SQLField'
+p144
+S"<class 'gluon.dal.Field'>"
+p145
+sS'mail'
+p146
+S'<gluon.tools.Mail object>'
+p147
+sS'BODY'
+p148
+S"<class 'gluon.html.BODY'>"
+p149
+sS'IS_DATE_IN_RANGE'
+p150
+S"<class 'gluon.validators.IS_DATE_IN_RANGE'>"
+p151
+sS'IFRAME'
+p152
+S"<class 'gluon.html.IFRAME'>"
+p153
+sS'URL'
+p154
+S'<function URL>'
+p155
+sS'__file__'
+p156
+S"r'C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\views\\default/settings.html'"
+p157
+sS'db'
+p158
+S'<DAL uri="sqlite://storage.sqlite">'
+p159
+sS'auth'
+p160
+S'<gluon.tools.Auth object>'
+p161
+sS'P'
+S"<class 'gluon.html.P'>"
+p162
+sS'TFOOT'
+p163
+S"<class 'gluon.html.TFOOT'>"
+p164
+sS'XHTML'
+p165
+S"<class 'gluon.html.XHTML'>"
+p166
+sS'ON'
+p167
+S'True'
+p168
+sS'OL'
+p169
+S"<class 'gluon.html.OL'>"
+p170
+sS'TEXTAREA'
+p171
+S"<class 'gluon.html.TEXTAREA'>"
+p172
+sS'MENU'
+p173
+S"<class 'gluon.html.MENU'>"
+p174
+sS'upload'
+p175
+S'<function upload>'
+p176
+sS'gender'
+p177
+S"[<lazyT 'Male'>, <lazyT 'Female'>]"
+p178
+sS'IS_IMAGE'
+p179
+S"<class 'gluon.validators.IS_IMAGE'>"
+p180
+sS'EM'
+p181
+S"<class 'gluon.html.EM'>"
+p182
+sS'CODE'
+p183
+S"<class 'gluon.html.CODE'>"
+p184
+sS'HTTP'
+p185
+S"<class 'gluon.http.HTTP'>"
+p186
+sS'HR'
+p187
+S"<class 'gluon.html.HR'>"
+p188
+sS'IS_DATETIME'
+p189
+S"<class 'gluon.validators.IS_DATETIME'>"
+p190
+sS'STYLE'
+p191
+S"<class 'gluon.html.STYLE'>"
+p192
+sS'LABEL'
+p193
+S"<class 'gluon.html.LABEL'>"
+p194
+sS'CLEANUP'
+p195
+S"<class 'gluon.validators.CLEANUP'>"
+p196
+sS'plugins'
+p197
+S'<gluon.tools.PluginManager object>'
+p198
+sS'SELECT'
+p199
+S"<class 'gluon.html.SELECT'>"
+p200
+sS'use_janrain'
+p201
+S'<function use_janrain>'
+p202
+sS'CENTER'
+p203
+S"<class 'gluon.html.CENTER'>"
+p204
+sS'prettydate'
+p205
+S'<function prettydate>'
+p206
+sS'find_rating'
+p207
+S'<function find_rating>'
+p208
+sS'Crud'
+p209
+S"<class 'gluon.tools.Crud'>"
+p210
+sS'Auth'
+p211
+S"<class 'gluon.tools.Auth'>"
+p212
+sS'DEVELOPMENT_MENU'
+p213
+g168
+sS'__builtins__'
+p214
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p215
+sS'HTML'
+p216
+S"<class 'gluon.html.HTML'>"
+p217
+sS'SQLFORM'
+p218
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p219
+sS'LOAD'
+p220
+S'<function LOAD>'
+p221
+sS'redirect'
+p222
+S'<function redirect>'
+p223
+sS'FIELDSET'
+p224
+S"<class 'gluon.html.FIELDSET'>"
+p225
+sS'IS_EQUAL_TO'
+p226
+S"<class 'gluon.validators.IS_EQUAL_TO'>"
+p227
+sS'embed64'
+p228
+S'<function embed64>'
+p229
+sS'IS_LIST_OF'
+p230
+S"<class 'gluon.validators.IS_LIST_OF'>"
+p231
+sS'INPUT'
+p232
+S"<class 'gluon.html.INPUT'>"
+p233
+sS'EMBED'
+p234
+S"<class 'gluon.html.EMBED'>"
+p235
+sS'_'
+S'<function _>'
+p236
+sS'H2'
+p237
+S"<class 'gluon.html.H2'>"
+p238
+sS'H3'
+p239
+S"<class 'gluon.html.H3'>"
+p240
+sS'BUTTON'
+p241
+S"<class 'gluon.html.BUTTON'>"
+p242
+sS'H1'
+p243
+S"<class 'gluon.html.H1'>"
+p244
+sS'H6'
+p245
+S"<class 'gluon.html.H6'>"
+p246
+sS'H4'
+p247
+S"<class 'gluon.html.H4'>"
+p248
+sS'H5'
+p249
+S"<class 'gluon.html.H5'>"
+p250
+sS'UL'
+p251
+S"<class 'gluon.html.UL'>"
+p252
+sS'IS_UPPER'
+p253
+S"<class 'gluon.validators.IS_UPPER'>"
+p254
+sS'xmlescape'
+p255
+S'<function xmlescape>'
+p256
+sS'IS_TIME'
+p257
+S"<class 'gluon.validators.IS_TIME'>"
+p258
+sS'OPTION'
+p259
+S"<class 'gluon.html.OPTION'>"
+p260
+sS'TITLE'
+p261
+S"<class 'gluon.html.TITLE'>"
+p262
+sS'CRYPT'
+p263
+S"<class 'gluon.validators.CRYPT'>"
+p264
+sS'IS_EMPTY_OR'
+p265
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p266
+sS'MARKMIN'
+p267
+S"<class 'gluon.html.MARKMIN'>"
+p268
+sS'cvUrl'
+p269
+S"''"
+p270
+sS'STRONG'
+p271
+S"<class 'gluon.html.STRONG'>"
+p272
+sS'COL'
+p273
+S"<class 'gluon.html.COL'>"
+p274
+sS'rated'
+p275
+S'<function rated>'
+p276
+sS'service'
+p277
+S'<gluon.tools.Service object>'
+p278
+sS'SCRIPT'
+p279
+S"<class 'gluon.html.SCRIPT'>"
+p280
+sS'TABLE'
+p281
+S"<class 'gluon.html.TABLE'>"
+p282
+sS'IS_IPV4'
+p283
+S"<class 'gluon.validators.IS_IPV4'>"
+p284
+sS'IS_LENGTH'
+p285
+S"<class 'gluon.validators.IS_LENGTH'>"
+p286
+sS'IS_IPV6'
+p287
+S"<class 'gluon.validators.IS_IPV6'>"
+p288
+sS'XML'
+p289
+S"<class 'gluon.html.XML'>"
+p290
+sS'B'
+S"<class 'gluon.html.B'>"
+p291
+sS'IMG'
+p292
+S"<class 'gluon.html.IMG'>"
+p293
+sS'SQLTABLE'
+p294
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p295
+sS'IS_MATCH'
+p296
+S"<class 'gluon.validators.IS_MATCH'>"
+p297
+sS'IS_ALPHANUMERIC'
+p298
+S"<class 'gluon.validators.IS_ALPHANUMERIC'>"
+p299
+sS'SPAN'
+p300
+S"<class 'gluon.html.SPAN'>"
+p301
+sS'IS_JSON'
+p302
+S"<class 'gluon.validators.IS_JSON'>"
+p303
+sS'IS_IPADDRESS'
+p304
+S"<class 'gluon.validators.IS_IPADDRESS'>"
+p305
+sS'IS_SLUG'
+p306
+S"<class 'gluon.validators.IS_SLUG'>"
+p307
+sS'value'
+p308
+S"''"
+p309
+sS'BEAUTIFY'
+p310
+S"<class 'gluon.html.BEAUTIFY'>"
+p311
+sS'META'
+p312
+S"<class 'gluon.html.META'>"
+p313
+sS'TYPE'
+p314
+S"[<lazyT 'Carer'>, <lazyT 'Care Seeker'>]"
+p315
+sS'IS_DATE'
+p316
+S"<class 'gluon.validators.IS_DATE'>"
+p317
+sS'IS_EMAIL'
+p318
+S"<class 'gluon.validators.IS_EMAIL'>"
+p319
+sS'IS_NOT_EMPTY'
+p320
+S"<class 'gluon.validators.IS_NOT_EMPTY'>"
+p321
+sS'IS_FLOAT_IN_RANGE'
+p322
+S"<class 'gluon.validators.IS_FLOAT_IN_RANGE'>"
+p323
+sS'TBODY'
+p324
+S"<class 'gluon.html.TBODY'>"
+p325
+sS'CAT'
+p326
+S"<class 'gluon.html.CAT'>"
+p327
+sS'Field'
+p328
+S"<class 'gluon.dal.Field'>"
+p329
+sS'IS_LIST_OF_EMAILS'
+p330
+S"<class 'gluon.validators.IS_LIST_OF_EMAILS'>"
+p331
+sS'Mail'
+p332
+S"<class 'gluon.tools.Mail'>"
+p333
+sS'DIV'
+p334
+S"<class 'gluon.html.DIV'>"
+p335
+sS'LEGEND'
+p336
+S"<class 'gluon.html.LEGEND'>"
+p337
+sS'COLGROUP'
+p338
+S"<class 'gluon.html.COLGROUP'>"
+p339
+sS'DAL'
+p340
+S"<class 'gluon.dal.DAL'>"
+p341
+sS'TT'
+p342
+S"<class 'gluon.html.TT'>"
+p343
+sS'TR'
+p344
+S"<class 'gluon.html.TR'>"
+p345
+sS'LI'
+p346
+S"<class 'gluon.html.LI'>"
+p347
+sS'role'
+p348
+S'None'
+p349
+sS'TH'
+p350
+S"<class 'gluon.html.TH'>"
+p351
+sS'TD'
+p352
+S"<class 'gluon.html.TD'>"
+p353
+sS'PluginManager'
+p354
+S"<class 'gluon.tools.PluginManager'>"
+p355
+sS'IS_URL'
+p356
+S"<class 'gluon.validators.IS_URL'>"
+p357
+sS'A'
+S"<class 'gluon.html.A'>"
+p358
+sS'HEAD'
+p359
+S"<class 'gluon.html.HEAD'>"
+p360
+sS'IS_DATETIME_IN_RANGE'
+p361
+S"<class 'gluon.validators.IS_DATETIME_IN_RANGE'>"
+p362
+sS'FORM'
+p363
+S"<class 'gluon.html.FORM'>"
+p364
+sS'I'
+S"<class 'gluon.html.I'>"
+p365
+sS'crud'
+p366
+S'<gluon.tools.Crud object>'
+p367
+sS'IS_NOT_IN_DB'
+p368
+S"<class 'gluon.validators.IS_NOT_IN_DB'>"
+p369
+sS'user'
+p370
+S'<Row {\'last_name\': \'Smith\', \'username\': \'Annie\',...Victorian Order and becam", \'first_name\': \'Vic\'}>'
+p371
+sg109
+S"<Storage {'body': <cStringIO.StringO object at 0...at 0x07E1DB70>, 'view': 'default/settings.html'}>"
+p372
+sS'THEAD'
+p373
+S"<class 'gluon.html.THEAD'>"
+p374
+sS'ANY_OF'
+p375
+S"<class 'gluon.validators.ANY_OF'>"
+p376
+sS'IS_NULL_OR'
+p377
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p378
+sS'__name__'
+p379
+S"'__restricted__'"
+p380
+sg56
+S"<Storage {'_vars': None, 'function': 'settings',...\\web2py_win\\\\web2py\\\\applications\\\\CareSeek2\\\\'}>"
+p381
+sS'IS_EXPR'
+p382
+S"<class 'gluon.validators.IS_EXPR'>"
+p383
+sS'T'
+S'<gluon.languages.translator object>'
+p384
+sS'IS_IN_SET'
+p385
+S"<class 'gluon.validators.IS_IN_SET'>"
+p386
+sS'IS_UPLOAD_FILENAME'
+p387
+S"<class 'gluon.validators.IS_UPLOAD_FILENAME'>"
+p388
+sS'IS_DECIMAL_IN_RANGE'
+p389
+S"<class 'gluon.validators.IS_DECIMAL_IN_RANGE'>"
+p390
+sssS'traceback'
+p391
+S'Traceback (most recent call last):\n  File "/home/mdipierro/make_web2py/web2py/gluon/restricted.py", line 220, in restricted\n  File "C:\\Users\\4524\\Documents\\web2py_win\\web2py\\applications\\CareSeek2\\views\\default/settings.html", line 63, in <module>\n    <span class="input-group-addon"></span>\nAttributeError: \'NoneType\' object has no attribute \'Interests\'\n'
+p392
+s.

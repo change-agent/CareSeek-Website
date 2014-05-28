@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+{{block content}}
+<h1> Our users</h1>
+
+{{for user in users:}}
+{{=A(user.first_name,_href=URL('default', 'dashboard',args=user.id))}}<br/>
+{{pass}}
+{{end}}

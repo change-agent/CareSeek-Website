@@ -1,0 +1,89 @@
+{{extend 'profile_layout.html'}}
+{{block profile_content}}
+{{
+	def getList():
+		minAge = request.vars.searchMinAge
+		if minAge == '':
+			minAge = -999
+		pass
+		maxAge = request.vars.searchMaxAge
+		if maxAge == '':
+			maxAge = 999
+		pass
+		interests = request.vars.searchInterests
+		name = request.vars.searchName
+		gender = request.vars.searchGender
+		row = None
+		if gender != 'Select prefered Gender...':
+			if name != None:
+				query = (db.auth_user.User_Type=="Carer")&((db.auth_user.Gender==gender)&((db.auth_user.Age >= minAge)&(db.auth_user.Age <= maxAge)))
+				row = db(query).select()
+			pass
+			elif name != None:
+				query = (db.auth_user.User_Type=="Carer")&((db.auth_user.first_name == name)|(db.auth_user.last_name == name))
+				row = db(query).select()
+			pass
+		return row
+}}
+{{pass}}
+<div class="row">
+            <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 main">
+                <h1 class="page-header">Advanced Search</h1>
+                 <form role='form'>
+                       <div class="form-group">
+                            <label for="">Name:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="searchName" name="searchName" placeholder="Enter a name...">
+                                <span class="input-group-addon"></span>
+
+						   </div>
+                        </div>
+                       <div class="form-group">
+                            <label for="">Interests:</label>
+                            <div class="input-group">
+                                <input type="text" id="searchInterests" name="searchInterests" value='' data-role="tagsinput"/>
+                            </div>
+                        </div>
+					    <div class="form-group">
+                            <label for="">Minimum age:</label>
+                            <div class="input-group">
+                                <input type="text" id="searchMinAge" name="searchMinAge" value='' data-role="tagsinput"/>
+                            </div>
+                        </div>
+					    <div class="form-group">
+                            <label for="">Maximum age:</label>
+                            <div class="input-group">
+                                <input type="text" id="searchMaxAge" name="searchMaxAge" value='' data-role="tagsinput"/>
+                            </div>
+                        </div>
+                      <select id="genderPref" name="searchGender">
+                          <option>Select prefered Gender...</option>
+                          <option>Female</option>
+                          <option>Male</option>
+                      </select>
+					<input class="btn btn-primary pull-right" type="submit" name="submit" value="Search!" id="search" onclick="{{people = getList()}}"></input>
+                </form>
+            </div> </div> <!-- End of column-->
+        <!--End of the search form -->
+        <!--Start of the results div -->
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 main">
+                <h1 class="page-header"></h1>
+				<h1 class="page-header">Search Results</h1>
+                <div id="searchResults" name='searchResults'>
+					<ul>
+						{{if people == None:}}
+						{{=DIV("No matching results!")}}
+						{{else:}}
+						{{for person in people:}}
+						<li> 
+							{{=A(person.first_name + " " + person.last_name ,_href=URL('default', 'myProfile', args=person.id))}}
+						</li>
+						{{pass}}
+					{{pass}}
+					</ul>
+                </div>
+            </div>
+        </div>
+<script src="{{=URL('static/js','bootstrap-tagsinput.min.js')}}"></script>
+{{end}}

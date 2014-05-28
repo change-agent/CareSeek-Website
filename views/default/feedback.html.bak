@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+{{block content}}
+<h1> Feedback</h1>
+<p>
+	Have some or have some feedback regarding CareSeek? Drop us a line!
+</p>
+{{=LOAD("mail", "index.load")}}
+{{end}}

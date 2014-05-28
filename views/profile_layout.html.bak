@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+    {{block navbar}}
+    <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+					<li><a href='{{=URL("default", "test")}}' id="demo">Demo</a></li>
+                    <li><a href='{{=URL("default", "mySchedule")}}' id="schedule">Schedule</a></li>
+                    <li><a href='{{=URL("default", "myProfile", args=auth.user.id)}}' id="profile">My Profile</a></li>
+                    <li><a href='{{=URL("default", "settings")}}' id="usrSettings">Settings</a></li>
+                    <li><a href='{{=URL("default", "help")}}' id="Help">Help</a></li>
+                    <li><a  href='{{=URL("default", "user/logout")}}' id="logout">Logout</a></li>
+                    <li><a href='{{=URL("default", "search")}}' id="searchPage">Search</a></li>
+                </ul>
+            </div>
+    {{end}}
+    {{block page}}
+    <div class="container-fluid">
+            {{block profile_content}}
+            {{end}}
+    </div>
+{{end}}

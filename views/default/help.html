@@ -1,0 +1,78 @@
+{{extend 'profile_layout.html'}}
+{{block profile_content}}
+<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+    <h1 class="page-header">FAQ</h1>
+    <div class="container-fluid">
+		<p><strong>1. <a href="#about">What is the site about?</a></strong><br>
+        <strong>2. <a href="#who">Who are you guys?</a></strong><br>
+        <strong>3. <a href="#stories">Who writes these stories?</a></strong><br>
+        <strong>4. <a href="#titles">Who writes the titles for these stories?</a></strong><br>
+        <strong>5. <a href="#submitted">I submitted a story, when will I see it?</a></strong><br>
+        <strong>6. <a href="#different">My story got published, but it’s slightly different! How come?</a></strong><br>
+        <strong>7. <a href="#book">Do you guys have a book?</a></strong><br>
+        <strong>8. <a href="#children">Is this site suitable for children?</a></strong><br>
+        <strong>9. <a href="#real">Are your stories real?</a></strong><br>
+        <strong>10. <a href="#contact">How do I contact you guys?</a></strong><br>
+        <strong>11. <a href="#42">What is the meaning of life?</a></strong></p>
+        <p>
+            <strong>1. <a name="about"></a>What is the site about?</strong><br>
+            We’ve all heard the popular phrase, “The customer is always right,” but is it true? Can the customer always be right? Not Always Right is a website that tells the other side of the story by collecting memorable and often hilarious tales from employees that prove, “The customer is <em>not</em> always right.”
+        </p>
+        <p>
+            Although we believe that customers deserve to be treated right, so do the employees and the other folks that serve them. Not Always Right is about leveling the playing field for those of us who toil and sweat every day trying to juggle demanding customers and often unreasonable corporate expectations. At the end of the day, it’s about remembering that whether we’re a customer or an employee, we’re all human, foibles and all.
+        </p>
+        <p>
+            <strong>2. <a name="who"></a>Who are you guys?</strong><br>
+            The Not Always Right editing team is made up of those who survived the services industry. Between them they have worked as waiters, sales, technical assistance and vegetable stockers at a grocery store. We know all about the pains of facing a disgruntled customer whose sole mission is to ruin your day.
+        </p>
+        <p>
+            Based in both the US and the UK, we are also aware how remarkably similar customers in the wrong can be, despite an ocean of difference!
+        </p>
+        <p><strong>3. <a name="stories"></a>Who writes these stories?</strong><br>
+            All of our stories are submitted by readers just like you! </p>
+        <p><strong>4. <a name="titles"></a>Who writes the titles for these stories?</strong><br>
+            The vast majority of the titles are cleverly conceived by our team of editors. Our own readers also welcome to include a suggested title when submitting a story</a>.</p>
+        <p><strong>5. <a name="submitted"></a>I submitted a story. When will I see it?</strong><br>
+            First of all, let us explain that we receive close to a hundred submissions every day. While many are great stories, only a few can make it on to the site. Some rely on very regional humor that while funny for a few might not work to a global audience.</p>
+        <p>We also ensure overly crude submissions, or those inciting hatred for whatever reason will not make the cut. We aim to keep the site at most a PG-13 environment, curse words will be starred out and occasional innuendos may pop up once in a while, but for the most part we don’t want to trigger any office internet filters!</p>
+        <p>That said, if your submission is genuinely funny and is in the good nature of the site you should see it soon. At the moment the backlog is about six weeks long, so be patient! If you really feel your submission is worthy of publishing then submit it again! It is entirely possible we just missed it the first time around.</p>
+        <p><strong>6. <a name="different"></a>My story got published, but it’s slightly different! How come?</strong><br>
+            Someometimes we will need to edit a story slightly to make it suitable for publication. Scene-setting is great, but extraneous detail may need to be cut down a little. Your submission might explain that this didn’t happen to you but to your friend/sister/uncle, but the audience doesn’t need to know that.</p>
+        <p>If it isn’t important to the punch-line we’ll also remove reference to brand names, overly strong language and overly long sentences.</p>
+        <p>Don’t worry, we still aim to keep the spirit of the story alive and ensure it remains as hilarious as ever!</p>
+        <p><strong>7. <a name="book"></a>Do you guys have a book?</strong><br>
+        Sure do! </p>
+        <p><strong>8. <a name="children"></a>Is this site suitable for children?</strong><br>
+        No. Some situations are not suitable for younger audiences. We do our best to censor profanity and other explicit content, but there are some topics that are best discussed only amongst adults and away from the prying eyes (and ears) of children.</p>
+        <p><strong>9. <a name="real"></a>Are your stories real?</strong><br>
+        As we’ve said, we receive up to a hundred submissions a day. Selecting the few that make it to the site is a long process, but even then the work isn’t done. Every submission that meets the grade is then put through search engines using multiple variations of key text.</p>
+        <p>In the past we have found submissions that are:<br>
+            -Quotes from episodes of sitcoms (<em>Family Guy</em> being a continuous favorite!)<br>
+            -Copy and paste jobs from other humor blogs<br>
+            -Slightly amended tales from stand-up comedians<br>
+            -Textual interpretations of YouTube clips
+        </p>
+        <p>
+            For obvious reasons, these submissions don’t make it to publication. Also for obvious reasons, those that do might have been copied from some other source that we missed, so if you spot something we haven’t then let us know</a>!
+        </p>
+        <p>
+            <strong>10. <a name="contact"></a>How do I contact you guys?</strong><br>
+            Quick answer? Very easily! Just fill out our contact form</a>. We can’t promise to reply to every one but we try our best!
+        </p>
+        <p><strong>11. <a name="42"></a>What is the meaning of life?</strong><br>
+        We haven’t a clue, but aim to be nice to the next waiter, barista, technical assistant, phone operator, lifeguard, burger flipper, taxi driver, vegetable stacker, or drive-thru attendant that serves you, or you might end up on this site!</p>
+        <p>That said, the answer to Life, the Universe, and Everything is <a href="http://en.wikipedia.org/wiki/42_%28number%29">42</a>.</p>
+        <p><strong>Additional Links:</strong><br>
+        <a href="{{=URL('default', 'legal', args=request.args(0))}}">Terms of Use</a><br>
+        <a href="{{=URL('default', 'privacy', args=request.args(0))}}">Privacy Policy</a><br>
+		<a href="{{=URL('default', 'help', args=request.args(0))}}">Contact</a>
+		</p>
+	</div>
+</div>
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+        <h1 class="page-header">Contact</h1>
+        {{=LOAD('mail','index.load',ajax=True)}}
+    </div>
+</div>
+{{end}}

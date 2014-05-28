@@ -1,0 +1,16 @@
+from gluon.tools import Mail
+
+def index():
+	form = SQLFORM.factory(
+		Field('file', 'upload', requires = IS_UPLOAD_FILENAME(extension='pdf')))
+	if form.accepts(request.vars):  #.process().accepted:
+		response.flash = 'File uploaded'
+		filename = request.vars.file
+		row = db(db.Carer.UserId==auth.user.id).select().first()
+		newCV = filename
+		row.CV = newCV
+		print filename
+		row.update_record()
+	elif form.errors:
+		response.flash = 'Must be PDF format'
+	return dict(form=form)

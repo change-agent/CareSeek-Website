@@ -1,0 +1,53 @@
+{{extend 'layout.html'}}
+{{block content}}
+<form role="form" enctype="multipart/form-data" method="post" >
+                  <div class="form-group" id="regFirstNameForm">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" id="regNameInput" placeholder="First Name" name="FirstName">
+                  </div>
+                  <div class="form-group" id="regLastNameForm">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" id="regLastNameInput" placeholder="Last Name" name="LastName">
+                  </div>
+                  <div class="form-group" id="regChildForm">
+                    <label>User Name</label>
+                    <input type="text" class="form-control" id="regChildNameInput"  name="UserName">
+                      <label>Gender</label>
+             <select id = "myList" name="Gender">
+               <option value = "male"> male</option>
+               <option value = "female">female</option>
+               <option value = "other">other</option>
+             </select>
+                  </div>
+                  <div class="form-group" id="regEmailForm">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" id="regEmailInput" placeholder="example@email.com" name="Email">
+                  </div>
+                 <div class="form-group" id="regEmailForm">
+                    <label>Phone number</label>
+                    <input type="phone" class="form-control" id="regEmailInput" placeholder="0432xxxx" name="Phone">
+                  </div>
+                  <div class="form-group" id="regPasswordForm">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="regPasswordInput" placeholder="Password" name="PassWord">
+                  </div>
+                  
+                <div class="form-group"><p>
+             <label>You are looking for</label>
+             <select id = "myList" name="UserType">
+               <option value = "carer"> a job</option>
+               <option value = "careseeker">a carer</option>
+               <option value = "other">other</option>
+             </select></p></div>
+    <div class="form-group">
+                   <label>Profile picture</label>
+                    <input type="file", name="ProfilePict">
+
+                  </div>
+    <input type="submit" />
+  <input type="hidden" name="_formname" value="test" />
+                </form>
+{{if form.errors:}}
+{{=BEAUTIFY(form.errors)}}
+{{pass}}
+{{end}}
